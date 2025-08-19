@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ClearPath Legal</title>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            body{
+                background-color: #f4f4f4;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 40px;
+                background-color: #222;
+                height: 90px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            header h1 {
+                color: white;
+                margin: 0;
+            }
+            header nav ul {
+                list-style: none;
+                display: flex;
+                gap: 24px;
+                margin: 0;
+                padding: 0;
+            }
+            header nav ul li a {
+                text-decoration: none;
+                color: white;
+                position: relative;
+                transition: color 0.3s ease-in-out;
+            }
+            header nav ul li a::after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                bottom: -5px;
+                left: 50%;
+                background-color: white;
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+            }
+            header nav ul li a:hover::after {
+                width: 100%;
+                left: 0;
+            }
+            .section1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                padding:40px;
+            }
+            .section1 h2{
+                font-size:30px;
+                color:#333;
+            }
+            .section1 h3{
+                color:#333;
+                font-size:16px;
+                padding-bottom:20px;
+            }
+            .button1, .interestedbutton{
+                display:inline-block;
+                padding: 16px 20px;
+                border: 1px solid black;
+                border-radius: 16px;
+                background-color:#222;
+                color:white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+            .button1:hover{
+                background-color:#333;
+                padding: 20px 24px;
+                border: 1px solid #333;
+                border-radius: 16px;
+                transition: 0.3s ease-in-out;
+                transform: translateY(-4px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            .interestedbutton:hover{
+                background-color:#333;
+                padding: 20px 24px;
+                border: 1px solid #333;
+                border-radius: 16px;
+                transition: 0.3s ease-in-out;
+                transform: translateY(-4px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            .button1 a, .interestedbutton a{
+                text-decoration: none;
+                color:white;   
+            }
+            .section2{
+                padding-bottom:40px;
+            }
+            .who{
+                text-align:center;
+                font-size:36px;
+                color:#333;
+            }
+            .descriptionwho{
+                color:#333;
+                font-size:17px;
+            }
+            .meet{
+                text-align:center;
+                font-size:30px;
+                color:#333;
+            }
+            .lawyers{
+                padding:40px;
+                animation: fadeInUp 0.8s ease both;
+            }
+            .lawyercard {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 20px 0;
+            }
+            .lawyers, .meetlawyers, .lawyercards {
+                overflow: visible;
+            }
+            .onelawyercard {
+                list-style: none;
+                width: 300px;
+                min-width: 200px;
+                height: 280px;
+                min-height: 200px;
+                margin: 10px;
+                border: 1px solid black;
+                border-radius: 16px;
+                background-color: #222;
+                text-align: center;
+                color: #FFFFFF;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                will-change: transform;
+            }
+            .onelawyercard:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            }
+            .onelawyercard h4{
+                padding: 8px;
+                font-size:20px;
+            }
+            .footer {
+                background-color: #222;
+                color: #fff;
+                padding: 40px 20px 20px 20px;
+                margin-top: 60px;
+            }
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 40px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .footer-about,
+            .footer-contact {
+                flex: 1;
+                min-width: 200px;
+            }
+            .footer-about h3 {
+                margin-bottom: 12px;
+                color: #ffffff;
+            }
+            .footer-bottom {
+                text-align: center;
+                margin-top: 30px;
+                border-top: 1px solid #ffffff;
+                padding-top: 16px;
+                font-size: 14px;
+            }
+            .services p, .chooseus p{
+                text-align:center;
+                font-size:30px;
+                color:#333;
+            }
+            .services ul, .chooseus ul{
+                color:#333
+            }
+            .interestedpart{
+                color:#333;
+                padding:20px;
+            }
+            .interested{
+                font-size:36px;
+                color:#333;
+            }
+            .interestedpart h2{
+                color:#333;
+            }
+            .interestedpart{
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                padding:40px;
+            }
+            
+
+            @media (min-width: 768px) {
+                .lawyercards{
+                   display:flex;
+                   align-items: center;
+                   justify-content: space-between;
+                }
+            }
+
+            @media (max-width: 768px) {
+                header {
+                   flex-direction: column;
+                   height: auto;
+                   padding: 20px;
+                }
+                header nav {
+                   padding-top:20px;
+                }
+                header nav ul {
+                   flex-direction: column;
+                   align-items: center;
+                   gap: 16px;
+                }
+                header nav ul li {
+                   padding: 4px 0;
+                }
+                .lawyercards {
+                   display:flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: space-between;
+                }
+                .footer-container {
+                   flex-direction: column;
+                   align-items: center;
+                   text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>ClearPath Legal</h1>
+            <nav>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+        </header>
+        <section class="section1">
+            <h2>Welcome to ClearPath Legal</h2>
+            <h3>We are a team of professional lawyers.</h3>
+            <p class="button1"><a href="">Contact us!</a></p>
+        </section>
+         <section class="section2">
+            <p class="who"><b>Who are we?</b></p>
+            <p class="descriptionwho">
+               At ClearPath Legal, we are a dedicated team of legal professionals 
+               committed to providing clear, reliable legal solutions. 
+               With a strong focus on client satisfaction, we work closely 
+               with individuals and businesses to help them navigate legal challenges with
+               confidence.
+            </p>
+        </section>
+        <section>
+            <h3 class="meet">Meet our lawyers:</h3>
+            <section class="lawyers">
+             <div class="meetlawyers">
+                <ul class="lawyercards">
+                    <li class="onelawyercard">
+                      <h4>Laura Bennett</h4>
+                      <h5>Founder</h5>
+                      <p>Over 10 years of experience in:</p>
+                      <ul>
+                        <li>Family Law</li>
+                        <li>Immigration</li>
+                      </ul>
+                    </li>
+                    <li class="onelawyercard">
+                      <h4>Marcus Taylor</h4>
+                      <h5>Professional Finance</h5>
+                      <p>Over 5 years of experience in</p>
+                      <ul>
+                        <li>Business Law</li>
+                        <li>Real Estate Law</li>
+                      </ul>
+                    </li>
+                    <li class="onelawyercard">
+                      <h4>Sofia Khan</h4>
+                      <h5>Chief of Defense</h5>
+                      <p>Over 20 years of experience in</p>
+                      <ul>
+                        <li>Criminal Defense</li>
+                      </ul>
+                    </li>
+                </ul>
+             </div>
+            </section>
+        </section>
+        <section class="services">
+            <p><b>We provide services like:</b></p>
+            <ul>
+                <li><h3>Family Law</h3></li>
+                <li><h3>Business Law</h3></li>
+                <li><h3>Real Estate Law</h3></li>
+                <li><h3>Immigration</h3></li>
+                <li><h3>Criminal Defense</h3></li>
+            </ul>
+        </section>
+        <section class="chooseus">
+            <p><b>Why choose us:</b></p>
+            <ul>
+                <li><h3>Professional Support</h3></li>
+                <li><h3>Years of Experience</h3></li>
+                <li><h3>Personalized Service</h3></li>
+                <li><h3>Transparent Communication</h3></li>
+            </ul>
+        </section>
+        <section class="interestedpart">
+            <h2 class="interested">Interested?</h2>
+            <h2>Get Legal Help Now</h2>
+            <p class="interestedbutton"><a href="#">Contact</a></p>
+        </section>
+        <footer class="footer">
+                <div class="footer-container">
+                  <div class="footer-about">
+                      <h3>ClearPath Legal</h3>
+                      <p>Providing legal solutions</p>
+                  </div>
+                  <div class="footer-contact">
+                      <h4>Contact</h4>
+                      <p>Email: mail@example.com</p>
+                      <p>Phone: +123 456 7890</p>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                <p>&copy; 2025 ClearPath Legal. All rights reserved.</p>
+                </div>
+        </footer>
+    </body>
+</html>

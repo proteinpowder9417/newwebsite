@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="portfolio.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My website</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+               CodeConstructs
+            </h1>
+            <nav class="navforcomputer">
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+            <p class="open">=</p>
+            <nav class="navforphone">
+               <p class="close">X</p>
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+        </header>
+        <section class="section1">
+            <h2>Example Projects Showing My Skills</h2>
+            <h4>These are example projects I designed to show my web design and development skills.</h4>
+        </section>
+        <section class="section2">
+            <iframe src="example1.html" class="example1"></iframe>
+            <hr>
+            <iframe src="example2.html" class="example2"></iframe>
+            <hr>
+        </section>
+        <section class="section3">
+            <h2>Interested in a website?</h2>
+            <p><a href="contact.html">Contact</a></p>
+        </section>
+        <footer class="footer">
+                <div class="footer-container">
+                  <div class="footer-about">
+                      <h3>CodeConstructs</h3>
+                      <p>Solutions for businesses and personal brands.</p>
+                  </div>
+                  <div class="footer-links">
+                      <h4>Quick Links</h4>
+                      <ul>
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="pricing.html">Services</a></li>
+                         <li><a href="portfolio.html">Portfolio</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-contact">
+                      <h4>Contact</h4>
+                      <p>Email: shahin@example.com</p>
+                      <p>Phone: +123 456 7890</p>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                <p>&copy; 2025 CodeConstructs. All rights reserved.</p>
+                </div>
+        </footer>
+
+
+
+
+
+
+         <script>
+            document.querySelector(".open").addEventListener("click", function(){
+                document.querySelector(".navforphone").classList.add("open");
+            });
+            document.querySelector(".close").addEventListener("click", function(){
+                document.querySelector(".navforphone").classList.remove("open");
+            });
+        </script>
+        <script>
+            document.querySelectorAll('.section3 p').forEach(el => {
+  el.addEventListener('touchstart', function(e) {
+    e.preventDefault();           // Mobilde iki tıklamayı engelle
+    this.classList.add('touch-hover'); // Hover efekti görünür
+
+    // 200ms sonra tıklamayı gerçekleştir ve sınıfı kaldır
+    setTimeout(() => {
+      this.classList.remove('touch-hover');
+      if (this.tagName.toLowerCase() === 'a') {
+        window.location.href = this.href;
+      } else {
+        this.click();
+      }
+    }, 200);
+  });
+});
+        </script>
+    </body>
+</html>

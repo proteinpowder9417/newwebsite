@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="bigwebsite.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My website</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+               CodeConstructs
+            </h1>
+            <nav class="navforcomputer">
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+            <p class="open">=</p>
+            <nav class="navforphone">
+               <p class="close">X</p>
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+        </header>
+        <section class="section1">
+            <h2>I Build High-Quality Websites for Small Businesses</h2>
+            <h3>Fast, mobile-friendly websites</h3>
+            <p><a href="contact.html">Let's talk!</a></p>
+        </section>
+        <section class="section2">
+            <p>
+                I'm Shahin, a freelance web developer with a passion for building fast, modern websites. Every project
+                <br> I work on is tailored to the client's goals — not just beautiful designs, but results that matter. With a strong focus on problem-solving, 
+                <br> I work closely with each client to turn ideas into digital solutions. I make sure the final product is clean, responsive. In addition to web 
+                <br>development, I offer graphic design services to improve your business with tools like business cards or social media posts. I provide SEO for your website for not only looking great but ranking well on search engines.
+            </p>
+        </section>
+        <section class="section3">
+                <h3 style="text-align: center;">Services:</h3>
+              <section class="section31">
+               <div class="line">
+                    <h4>💻 Fast, Responsive Websites</h4>
+                    <p>Build high-performing websites that work beautifully on all devices. 
+                    Designed to fit your goals and built with clean, modern code.</p>
+                    <h5>Services include:</h5>
+                    <ul>
+                       <li>Responsive design</li>
+                       <li>Fast loading and performance optimization</li>
+                       <li>Designs using HTML and CSS</li>
+                       <li>Easy-to-update websites for small businesses or personal brands</li>
+                    </ul>
+                </div>
+                <div class="line">
+                    <h4>🎨 Clean and Modern Graphic Design (Coming soon)</h4>
+                    <p>
+                        Get eye-catching visuals that match your brand. From logos to social media posts, 
+                        I design with purpose and clarity.
+                    </p>
+                    <h5>Services include:</h5>
+                    <ul>
+                        <li>Logo designs</li>
+                        <li>Banners</li>
+                        <li>Business cards</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>📈 SEO That Gets You Found (Coming soon)</h4>
+                    <p>
+                        Make your website visible to search engines and attract more visitors. Simple 
+                        but effective SEO strategies that boost rankings and results.
+                    </p>
+                    <h5>Services include:</h5>
+                    <ul>
+                        <li>Meta titles</li>
+                        <li>Speed fix</li>
+                        <li>Keywords</li>
+                    </ul>
+                </div>
+              </section>
+        </section>
+         <section class="section4">
+            <h3>See some of my works:</h3>
+            <h4><a href="portfolio.html">See example projects</a></h4>
+        </section>
+        <section class="section5">
+            <h2>
+                Ready to get your business online?
+                <br>Let's build something great together.
+            </h2>
+            <p><a href="contact.html">Let's talk!</a></p>
+        </section>
+        <footer class="footer">
+                <div class="footer-container">
+                  <div class="footer-about">
+                      <h3>CodeConstructs</h3>
+                      <p>Solutions for businesses and personal brands.</p>
+                  </div>
+                  <div class="footer-links">
+                      <h4>Quick Links</h4>
+                      <ul>
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="pricing.html">Services</a></li>
+                         <li><a href="portfolio.html">Portfolio</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-contact">
+                      <h4>Contact</h4>
+                      <p>Email: shahin@example.com</p>
+                      <p>Phone: +123 456 7890</p>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                <p>&copy; 2025 CodeConstructs. All rights reserved.</p>
+                </div>
+        </footer>
+
+
+         <script>
+            document.querySelector(".open").addEventListener("click", function(){
+                document.querySelector(".navforphone").classList.add("open");
+            });
+            document.querySelector(".close").addEventListener("click", function(){
+                document.querySelector(".navforphone").classList.remove("open");
+            });
+        </script>
+        <script>
+            document.querySelectorAll('.section1 p, .section4 h4, .section5 p').forEach(el => {
+  el.addEventListener('touchstart', function(e) {
+    e.preventDefault();           // Mobilde iki tıklamayı engelle
+    this.classList.add('touch-hover'); // Hover efekti görünür
+
+    // 200ms sonra tıklamayı gerçekleştir ve sınıfı kaldır
+    setTimeout(() => {
+      this.classList.remove('touch-hover');
+      if (this.tagName.toLowerCase() === 'a') {
+        window.location.href = this.href;
+      } else {
+        this.click();
+      }
+    }, 200);
+  });
+});
+        </script>
+    </body>
+</html>

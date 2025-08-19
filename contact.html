@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta name="description">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="contact.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My website</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+               CodeConstructs
+            </h1>
+            <nav class="navforcomputer">
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+            <p class="open">=</p>
+            <nav class="navforphone">
+               <p class="close">X</p>
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+        </header>
+        <section class="section1">
+            <h2>Contact Me</h2>
+            <p>
+              Have a question, project idea, or want to work together? <br>
+              Fill the form below and I'll get back to you as soon as possible.
+            </p>
+        </section>
+        <section>
+          <form id="contactForm" action="https://formsubmit.co/sahintagizade41@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
+
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Write an email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message here"
+              rows="5"
+              required
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+        <script>
+const form = document.querySelector("form");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form)
+  }).then(response => {
+    alert("Your message was received.");
+    form.reset();
+  }).catch(error => {
+    alert("There is a problem. Try again.");
+  });
+});
+        </script>
+        <p class="mail">Prefer email? Reach me at <a href="mailto:you@example.com">you@example.com</a></p>
+        <footer class="footer">
+                <div class="footer-container">
+                  <div class="footer-about">
+                      <h3>CodeConstructs</h3>
+                      <p>Solutions for businesses and personal brands.</p>
+                  </div>
+                  <div class="footer-links">
+                      <h4>Quick Links</h4>
+                      <ul>
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="pricing.html">Services</a></li>
+                         <li><a href="portfolio.html">Portfolio</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-contact">
+                      <h4>Contact</h4>
+                      <p>Email: shahin@example.com</p>
+                      <p>Phone: +123 456 7890</p>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                <p>&copy; 2025 CodeConstructs. All rights reserved.</p>
+                </div>
+        </footer>
+
+
+
+
+        <script>
+            document.querySelector(".open").addEventListener("click", function(){
+                document.querySelector(".navforphone").classList.add("open");
+            });
+            document.querySelector(".close").addEventListener("click", function(){
+                document.querySelector(".navforphone").classList.remove("open");
+            });
+        </script>
+
+    </body>
+</html>

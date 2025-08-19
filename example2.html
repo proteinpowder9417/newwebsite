@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            background-color: #2c3e50;
+            padding: 0 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header p {
+            color: #ecf0f1;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            user-select: none;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        header nav ul li {
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        header nav ul li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: 600;
+            background-color: #34495e;
+            transition: background-color 0.3s ease;
+            border: 1.5px solid #34495e;
+            border-radius: 6px;
+        }
+        header nav ul li a:hover,
+        header nav ul li a:focus {
+            background-color: #1abc9c;
+            border-color: #1abc9c;
+            color: white;
+            outline: none;
+        }
+        .thefirstsection {
+            background-image: url('coding.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .thefirstsection p {
+            font-size: 36px;
+            color: #ecf0f1;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .thesecondsection {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .thesecondsection h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #27ae60;
+        }
+        .thesecondsection h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2980b9;
+        }
+        .thesecondsection p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .thesecondsection ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .thesecondsection ul li {
+            background-color: #ecf0f1;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1 1 45%;
+            max-width: 45%;
+            color: #2c3e50;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #Contact {
+            max-width: 600px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        #Contact h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        #Contact ul {
+            padding: 0;
+            margin: 0;
+        }
+        #Contact ul li {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        #Contact ul li a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        #Contact ul li p {
+            margin: 4px 0 0 0;
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px 10px;
+            font-weight: 600;
+            font-size: 18px;
+            user-select: none;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+                gap: 10px;
+            }
+            header nav ul {
+                justify-content: center;
+            }
+            .thesecondsection ul li {
+                max-width: 100%;
+                flex: 1 1 100%;
+            }
+            .thefirstsection p {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p><b>Coding Masterclass</b></p>
+        <nav>
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="thefirstsection">
+       <p>Learn fundamentals of coding in our Coding Masterclass.</p>
+    </section>
+    <section class="thesecondsection" id="About">
+        <h2>🚀 Join our Coding Masterclass!</h2>
+        <p>
+              💻 Are you ready to improve your coding skills and become a programming professional?
+              Our Coding Masterclass is designed to take you from beginner to expert,
+              helping you master essential coding knowledge, build real-world projects,
+              and gain confidence in your abilities. Plus, as a fun bonus, we're giving 
+              coding-themed stickers to all participants!
+        </p>
+        <h3>What You'll Learn:</h3>
+        <ul>
+            <li>✅ Fundamental programming topics</li>
+            <li>✅ Introduction to backend development</li>
+            <li>✅ Web development (HTML, CSS, JavaScript)</li>
+            <li>✅ Algorithms</li>
+            <li>✅ Problem-solving techniques</li>
+            <li>✅ How to design and build projects</li>
+        </ul>
+        <h3>All participants will receive a special Coding Masterclass Sticker:</h3>
+        <ul>
+            <li>🎨 Fun & creative coding-themed designs</li>
+            <li>💻 Stickers for laptops</li>
+        </ul>
+        <p>Get Your Stickers!</p>
+        <p>
+           Don't miss this opportunity to boost your skills.
+           Join now and start your coding adventure today!
+        </p>
+    </section>
+    <section id="Contact">
+        <h2>💻 Contact:</h2>
+        <ul style="list-style:none;">
+            <li>Email:<a href="#">example@gmail.com</a><p>(This is an example.)</p></li>
+            <li>Phone:<a href="#">+1234567890</a><p>(This is an example.)</p></li>
+        </ul>
+    </section>
+    <footer>
+        <h3>Coding Masterclass</h3>
+    </footer>
+</body>
+</html>
